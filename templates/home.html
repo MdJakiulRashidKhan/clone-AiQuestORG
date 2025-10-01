@@ -18,7 +18,7 @@
           />
         </div>
         <nav class="nav-links">
-          <a href="#">Home</a>
+          <a href="{% url 'home' %}">Home</a>
           <div class="dropdown-container">
             <a href="#" class="dropdown-toggle"
               >LIVE Courses <span class="arrow">▼</span></a
@@ -34,8 +34,8 @@
               <a href="#">Applied Statistics for Data Scientists</a>
             </div>
           </div>
-          <a href="#">Blogs</a>
-          <a href="#">Contact</a>
+          <a href="{% url 'blogs' %}">Blogs</a>
+          <a href="{% url 'contact' %}">Contact</a>
         </nav>
       </div>
     </header>
