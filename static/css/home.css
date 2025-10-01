@@ -1,0 +1,240 @@
+/* Reset */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header.navbar {
+  background-color: #030929;
+  color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Header container */
+header > div {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+header .logo img {
+  height: 60px;
+  margin-right: 20px;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  color: #ffeb3b;
+}
+
+/* Dropdown */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+/* hero section */
+.hero-section {
+  background-color: #030929;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.hero-section > div {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 220px;
+}
+
+.content-left {
+  flex: 1;
+}
+
+.headline-bengali {
+  font-size: 5rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.btn-courses {
+  display: inline-block;
+  background: #c21019;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.tagline-bengali {
+  font-size: 1.3rem;
+  color: #f3eeee;
+}
+
+.graphic-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+.brain-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Responsive ---------- */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #37128b;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    min-width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .dropdown-container:hover .dropdown-menu {
+    display: none; /* disable hover */
+  }
+
+  .dropdown-container.open .dropdown-menu {
+    display: block; /* toggle on click */
+  }
+}
+/* hero responsive  */
+
+/* ✅ Responsive for tablets */
+@media (max-width: 992px) {
+  .hero-section > div {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .headline-bengali {
+    font-size: 2.2rem;
+  }
+
+  .btn-courses {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* ✅ Responsive for mobile */
+@media (max-width: 576px) {
+  .headline-bengali {
+    font-size: 1.8rem;
+  }
+
+  .tagline-bengali {
+    font-size: 1rem;
+  }
+
+  .btn-courses {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
