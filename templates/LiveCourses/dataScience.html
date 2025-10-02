@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/LiveCourses/dataScience.css' %}"
+    />
+    <title>Contact - AiQuestORG</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <div>
+        <div class="logo">
+          <img
+            src="{% static 'img/logo.png' %}"
+            alt="AiQuestORG Logo"
+            class="logo-image"
+          />
+        </div>
+        <nav class="nav-links">
+          <a href="{% url 'home' %}">Home</a>
+          <div class="dropdown-container">
+            <a href="#" class="dropdown-toggle"
+              >LIVE Courses <span class="arrow">▼</span></a
+            >
+            <div class="dropdown-menu">
+              <a href="{% url 'data_science' %}"
+                >Linear Algebra for AI & Data Science</a
+              >
+              <a href="{% url 'python_developer' %}"
+                >Become a Python Developer</a
+              >
+
+              <a href="{% url 'data_engineer' %}">Become a Big Data Engineer</a>
+              <a href="{% url 'data_analysis' %}"
+                >Data Analysis Specialization</a
+              >
+              <a href="{% url 'machine_learning' %}"
+                >Data Science & Machine Learning</a
+              >
+              <a href="{% url 'deep_learning' %}"
+                >Deep Learning & Generative AI</a
+              >
+              <a href="{% url 'python_backend' %}"
+                >Python Backend API Development</a
+              >
+              <a href="{% url 'statistics' %}"
+                >Applied Statistics for Data Scientists</a
+              >
+            </div>
+          </div>
+          <a href="{% url 'blogs' %}">Blogs</a>
+          <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="hero-section">
+      <div class="content">
+        <h1 class="headline">Contact us</h1>
+
+        <p class="tagline">Contacting Your Course Coordinator !!</p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Column 1 -->
+        <div class="footer-logo-section">
+          <div class="logo-container">
+            <img
+              src="{% static 'img/logo.png' %}"
+              alt="AiQuestORG Logo"
+              class="footer-logo"
+            />
+          </div>
+          <p>
+            Embarking on a data science career journey? Look no further than
+            AIQuest Intelligence, the premier destination for top-notch data
+            science courses in Bangladesh.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link-icon">f</a>
+            <a href="#" class="social-link-icon">X</a>
+            <a href="#" class="social-link-icon">in</a>
+            <a href="#" class="social-link-icon">►</a>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-links-section">
+          <h3>Quick Link</h3>
+          <ul class="quick-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-contact-section">
+          <h3>Contact</h3>
+          <ul class="contact-details">
+            <li>
+              Email:
+              <a class="link" href="mailto:contact@aiquest.org"
+                >contact@aiquest.org</a
+              >
+            </li>
+            <li>
+              Address: Panthapath, Dhaka - 1205, <br />
+              Bangladesh
+            </li>
+            <li>
+              Call: +8801704265972; <br />
+              +8801757260272
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

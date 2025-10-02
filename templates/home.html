@@ -24,14 +24,29 @@
               >LIVE Courses <span class="arrow">▼</span></a
             >
             <div class="dropdown-menu">
-              <a href="#">Linear Algebra for AI & Data Science</a>
-              <a href="#">Become a Python Developer</a>
-              <a href="#">Become a Big Data Engineer</a>
-              <a href="#">Data Analysis Specialization</a>
-              <a href="#">Data Science & Machine Learning</a>
-              <a href="#">Deep Learning & Generative AI</a>
-              <a href="#">Python Backend API Development</a>
-              <a href="#">Applied Statistics for Data Scientists</a>
+              <a href="{% url 'data_science' %}"
+                >Linear Algebra for AI & Data Science</a
+              >
+              <a href="{% url 'python_developer' %}"
+                >Become a Python Developer</a
+              >
+
+              <a href="{% url 'data_engineer' %}">Become a Big Data Engineer</a>
+              <a href="{% url 'data_analysis' %}"
+                >Data Analysis Specialization</a
+              >
+              <a href="{% url 'machine_learning' %}"
+                >Data Science & Machine Learning</a
+              >
+              <a href="{% url 'deep_learning' %}"
+                >Deep Learning & Generative AI</a
+              >
+              <a href="{% url 'python_backend' %}"
+                >Python Backend API Development</a
+              >
+              <a href="{% url 'statistics' %}"
+                >Applied Statistics for Data Scientists</a
+              >
             </div>
           </div>
           <a href="{% url 'blogs' %}">Blogs</a>

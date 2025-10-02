@@ -1,0 +1,397 @@
+/* ===========================
+   blogs.css — Full page styles
+   =========================== */
+
+/* -------- Reset / Base -------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* utility container */
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------------- Navbar ---------------- */
+header.navbar {
+  background-color: #01012c;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+header.navbar > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.logo img,
+.logo-image {
+  height: 60px;
+  width: auto;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* default link style */
+.nav-links a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.25s, color 0.25s, transform 0.08s;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffeb3b;
+  transform: translateY(-1px);
+}
+
+/* Dropdown */
+/* Dropdown */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 300px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  padding: 10px 0;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
+/* show on hover for desktop */
+@media (hover: hover) and (min-width: 768px) {
+  .dropdown-container:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* ---------------- Hero ---------------- */
+.hero-section {
+  background: linear-gradient(180deg, #01012c 0%, #1f1b6b 100%);
+  color: #fff;
+  text-align: center;
+  padding: 72px 20px;
+}
+
+/* small inner container */
+.hero-section .content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+/* tagline text */
+.hero-section .tagline {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  color: #e6e9ff;
+  max-width: 900px;
+}
+
+/* ---------------- Blogs Section ---------------- */
+/* visible, readable default (light background) */
+.blogs-section {
+  background-color: #ffffff; /* light so text is readable */
+  color: #111827;
+  padding: 60px 20px;
+  width: 100%;
+}
+
+/* center container */
+.blogs-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main heading (Coming Soon...) */
+.blogs-section h1 {
+  margin: 0 0 28px 0;
+  color: #01012c; /* visible on white bg */
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+/* If you later add article-grid here, use these styles */
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 12px;
+}
+
+/* article card */
+.article-card {
+  background: #fff;
+  border: 1px solid #e6e9ef;
+  border-radius: 10px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.06);
+}
+
+.category {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: inline-block;
+}
+
+.title {
+  font-size: 1.125rem;
+  color: #0f172a;
+  margin: 4px 0 8px;
+  line-height: 1.35;
+  font-weight: 600;
+}
+
+.excerpt {
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+.read-more {
+  margin-top: auto;
+  color: #4c51bf;
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+
+/* footer-links (bottom of list) */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+.older-entries {
+  color: #4c51bf;
+  font-weight: 600;
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+  margin-top: 40px;
+  background: #01012c;
+  color: #c5c9d1;
+  padding: 48px 20px;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-logo-section,
+.footer-links-section,
+.footer-contact-section {
+  flex: 1 1 250px;
+}
+.footer-logo {
+  width: 120px;
+  margin-bottom: 12px;
+}
+.footer-logo-section p {
+  color: #bdbfc9;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+.social-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  text-decoration: none;
+}
+.social-link-icon:hover {
+  background: #ff4c00;
+  color: #fff;
+}
+
+.footer-links-section h3,
+.footer-contact-section h3 {
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.quick-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.quick-links li {
+  margin-bottom: 10px;
+}
+.quick-links a {
+  color: #bdbfc9;
+}
+.quick-links a:hover {
+  color: #ffb86b;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #bdbfc9;
+}
+.contact-details li {
+  margin-bottom: 8px;
+}
+
+/* ---------------- Responsive breakpoints ---------------- */
+@media (min-width: 640px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .hero-section {
+    padding: 96px 20px;
+  }
+  .blogs-section h1 {
+    font-size: 2.75rem;
+  }
+}
+
+/* Mobile adjustments for nav & hero */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none; /* hide by default on small screens (toggle with JS if needed) */
+  }
+  /* if you use .nav-links.active via JS, it will show */
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: #2b1b6b;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 68px;
+    padding: 8px 0;
+  }
+
+  header.navbar > div {
+    padding: 8px 16px;
+  }
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* tiny screens */
+@media (max-width: 480px) {
+  .hero-section .tagline {
+    font-size: 0.95rem;
+  }
+  .blogs-section h1 {
+    font-size: 1.6rem;
+    padding: 8px 0;
+  }
+}
